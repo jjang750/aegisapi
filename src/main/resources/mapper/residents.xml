@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aegisep.mapper.ResidentsMapper">
+<!-- 	<select id="getAuthenticationByToken" resultType="com.aegisep.dto.ResidentsVo">-->
+<!--		<![CDATA[-->
+<!--			select seq, token , username, password, authorities from "UserVo" where token = '${token}'-->
+<!--	 	]]>-->
+<!--    </select>-->
+    
+    <insert id="insertResidents" parameterType="com.aegisep.dto.ResidentsVo">
+		<![CDATA[
+			insert into residents (
+				aptcode,
+				orgapt,
+				house_no,
+				head_of_household,
+				same_address,
+				have_car,
+				house_owner,
+				apt_name,
+				apt_dong,
+				apt_ho,
+				moving_in_date,
+				residence_from,
+				residence_to,
+				owner_name,
+				owner_address,
+				owner_phone,
+				api,
+				version,
+				description
+			) values (
+				?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+			)
+	 	]]>
+	</insert>
+	<insert id="insertHouseholdComposition" parameterType="com.aegisep.dto.Composition">
+		<![CDATA[
+			insert into residents (
+				index,
+				household_type,
+				household_owner,
+				household_name,
+				household_birthday,
+				household_phone
+			) values (?,?,?,?,?,?)
+	 	]]>
+	</insert>
+	<insert id="insertCars" parameterType="com.aegisep.dto.Cars">
+		<![CDATA[
+			insert into residents (
+				index,
+				owner_name,
+				car_type,
+				car_no,
+				electric_car
+			) values (?,?,?,?,?)
+	 	]]>
+	</insert>
+</mapper>

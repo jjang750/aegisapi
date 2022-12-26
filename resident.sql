@@ -1,0 +1,88 @@
+
+PS_HOST=panthipnas.ddns.net;PS_USER=openapi;PS_PASSWORD=dlwltmdpsxj1!
+
+
+CREATE TABLE residents
+(
+	seq SERIAL PRIMARY KEY,
+	aptcode VARCHAR(5) not null,
+	orgapt VARCHAR(5) not null,
+	house_no VARCHAR(10) not null,
+
+	head_of_household VARCHAR(1),
+	same_address VARCHAR(1),
+	have_car VARCHAR(1),
+	house_owner VARCHAR(1),
+
+	apt_name VARCHAR(50),
+	apt_dong VARCHAR(4),
+	apt_ho VARCHAR(4),
+	moving_in_date VARCHAR(8),
+	residence_from VARCHAR(8),
+	residence_to VARCHAR(8),
+	owner_name VARCHAR(20),
+	owner_address VARCHAR(200),
+	owner_phone VARCHAR(12),
+	api VARCHAR(128),
+	version VARCHAR(10),
+	description VARCHAR(2000),
+	create_dt date NOT NULL
+
+);
+
+
+CREATE TABLE composition
+(
+
+seq SERIAL PRIMARY KEY, 
+index INTEGER not null,
+household_type VARCHAR(2) ,
+household_owner VARCHAR(1) ,
+household_name VARCHAR(20) ,
+household_birthday VARCHAR(8) ,
+household_phone VARCHAR(12)
+
+);
+
+
+CREATE TABLE cars
+(
+
+seq SERIAL PRIMARY KEY, 
+index INTEGER not null;
+owner_name VARCHAR(20) ,
+car_type VARCHAR(20) ,
+car_no VARCHAR(10) ,
+electric_car VARCHAR(1)
+
+);
+
+
+aptcode, 
+orgapt, 
+house_no, 
+head_of_household, 
+same_address, 
+have_car, 
+house_owner,
+apt_name, 
+apt_dong, 
+apt_ho,
+moving_in_date,
+residence_from,
+residence_to,
+owner_name,
+owner_address,
+owner_phone,
+api,
+version,
+description
+
+
+index,
+household_type,
+household_owner,
+household_name,
+household_birthday,
+household_phone
+
