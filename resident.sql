@@ -78,11 +78,55 @@ api,
 version,
 description
 
+insert into residents (
+
+	index,
+	household_type,
+	household_owner,
+	household_name,
+	household_birthday,
+	household_phone
+
+) values ()
+
 
 index,
-household_type,
-household_owner,
-household_name,
-household_birthday,
-household_phone
+owner_name,
+car_type,
+car_no,
+electric_car
+
+'${aptcode}',
+'${orgapt}',
+'${house_no}',
+'${head_of_household}',
+'${same_address}',
+'${have_car}',
+'${house_owner}',
+'${apt_name}',
+'${apt_dong}',
+'${apt_ho}',
+'${moving_in_date}',
+'${residence_from}',
+'${residence_to}',
+'${owner_name}',
+'${owner_address}',
+'${owner_phone}',
+'${api}',
+'${version}',
+'${description}'
+
+'${index}',
+'${household_type}',
+'${household_owner}',
+'${household_name}',
+'${household_birthday}',
+'${household_phone}'
+
+
+'${index}',
+'${owner_name}',
+'${car_type}',
+'${car_no}',
+'${electric_car}'
 

@@ -77,8 +77,11 @@ private 라우팅 테이블에는 private 서브넷 연결을 연결한다.
 
 
 
+# Docker build 
 
+docker build -t aegisapi:0.0.1 .
 
+docker run -it -d --name aegisapi -p 80:80 -e "PS_HOST=panthipnas.ddns.net" -e "PS_USER=openapi" -e "PS_PASSWORD=dlwltmdpsxj1!"  aegisapi:0.0.1
 
 # 성공
 ![img_2.png](images/img_2.png)

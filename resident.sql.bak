@@ -77,3 +77,12 @@ owner_phone,
 api,
 version,
 description
+
+
+index,
+household_type,
+household_owner,
+household_name,
+household_birthday,
+household_phone
+
