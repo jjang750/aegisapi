@@ -19,8 +19,8 @@ public class ResidentsService {
 
     public Integer insert(ResidentsVo vo){
         insertResident(vo);
-        insertHouseholdComposition(vo.getHousehold_composition());
-        insertCars(vo.getCars());
+        insertHouseholdComposition(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(), vo.getHousehold_composition());
+        insertCars(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(),vo.getCars());
 
         return 1;
     }
@@ -29,11 +29,11 @@ public class ResidentsService {
         mapper.insertResidents(vo);
     }
 
-    private void insertHouseholdComposition(List<Composition> compositions) {
-        mapper.insertHouseholdComposition(compositions);
+    private void insertHouseholdComposition(String aptcode, String orgapt, String house_no, List<Composition> compositions) {
+        mapper.insertHouseholdComposition(aptcode, orgapt, house_no, compositions);
     }
 
-    private void insertCars(List<Cars> cars) {
-        mapper.insertCars(cars);
+    private void insertCars(String aptcode, String orgapt, String house_no, List<Cars> cars) {
+        mapper.insertCars(aptcode, orgapt, house_no, cars);
     }
 }

@@ -55,18 +55,25 @@
 			)
 	 	]]>
 	</insert>
-	<insert id="insertHouseholdComposition" parameterType="java.util.List">
+<!--	 parameters="int; string" -->
+	<insert id="insertHouseholdComposition">
 			insert into composition (
 				index,
+				aptcode,
+				orgapt,
+				house_no,
 				household_type,
 				household_owner,
 				household_name,
 				household_birthday,
 				household_phone
 			) values
-		<foreach collection="list" item="composition" open="" close="" separator=" , ">
+		<foreach collection="compositions" item="composition" open="" close="" separator=" ,">
 			(
 				#{composition.index},
+				#{aptcode},
+				#{orgapt},
+				#{house_no},
 				#{composition.household_type},
 				#{composition.household_owner},
 				#{composition.household_name},
@@ -75,21 +82,27 @@
 			)
 		</foreach>
 	</insert>
-	<insert id="insertCars" parameterType="java.util.List">
+	<insert id="insertCars">
 			insert into cars (
 				index,
+				aptcode,
+				orgapt,
+				house_no,
 				owner_name,
 				car_type,
 				car_no,
 				electric_car
 			) values
-		<foreach collection="list" item="cars" open="" close="" separator=" , ">
+		<foreach collection="cars" item="car" open="" close="" separator=" , ">
 			(
-			${cars.index},
-			'${cars.owner_name}',
-			'${cars.car_type}',
-			'${cars.car_no}',
-			'${cars.electric_car}'
+				#{car.index},
+				#{aptcode},
+				#{orgapt},
+				#{house_no},
+				#{car.owner_name},
+				#{car.car_type},
+				#{car.car_no},
+				#{car.electric_car}
 			)
 		</foreach>
 	</insert>
