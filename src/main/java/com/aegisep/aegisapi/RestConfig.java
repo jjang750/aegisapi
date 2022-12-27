@@ -1,14 +1,13 @@
 package com.aegisep.aegisapi;
 
 import com.aegisep.dto.ResidentsVo;
+import com.aegisep.mapper.ResidentsMapper;
 import com.aegisep.service.ResidentsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,11 +23,8 @@ import java.util.HashMap;
 @Slf4j
 public class RestConfig {
 
-    private ResidentsService service;
-
-    public RestConfig(){
-        this.service = new ResidentsService();
-    }
+    @Autowired
+    ResidentsService residentsService;
 
     @GetMapping(value = "/", produces = "application/json; charset=UTF-8")
     public ResponseEntity<String> health() {
@@ -54,7 +50,7 @@ public class RestConfig {
 
         log.info("ResidentsVo : {}", residents);
 
-        service.insert(residents);
+        residentsService.insert(residents);
 
         return ResponseEntity.ok("put residents");
     }

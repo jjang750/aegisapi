@@ -33,31 +33,64 @@
 				version,
 				description
 			) values (
-				?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+				'${aptcode}',
+				'${orgapt}',
+				'${house_no}',
+				'${head_of_household}',
+				'${same_address}',
+				'${have_car}',
+				'${house_owner}',
+				'${apt_name}',
+				'${apt_dong}',
+				'${apt_ho}',
+				'${moving_in_date}',
+				'${residence_from}',
+				'${residence_to}',
+				'${owner_name}',
+				'${owner_address}',
+				'${owner_phone}',
+				'${api}',
+				'${version}',
+				'${description}'
 			)
 	 	]]>
 	</insert>
-	<insert id="insertHouseholdComposition" parameterType="com.aegisep.dto.Composition">
-		<![CDATA[
-			insert into residents (
+	<insert id="insertHouseholdComposition" parameterType="java.util.List">
+			insert into composition (
 				index,
 				household_type,
 				household_owner,
 				household_name,
 				household_birthday,
 				household_phone
-			) values (?,?,?,?,?,?)
-	 	]]>
+			) values
+		<foreach collection="list" item="composition" open="" close="" separator=" , ">
+			(
+				#{composition.index},
+				#{composition.household_type},
+				#{composition.household_owner},
+				#{composition.household_name},
+				#{composition.household_birthday},
+				#{composition.household_phone}
+			)
+		</foreach>
 	</insert>
-	<insert id="insertCars" parameterType="com.aegisep.dto.Cars">
-		<![CDATA[
-			insert into residents (
+	<insert id="insertCars" parameterType="java.util.List">
+			insert into cars (
 				index,
 				owner_name,
 				car_type,
 				car_no,
 				electric_car
-			) values (?,?,?,?,?)
-	 	]]>
+			) values
+		<foreach collection="list" item="cars" open="" close="" separator=" , ">
+			(
+			${cars.index},
+			'${cars.owner_name}',
+			'${cars.car_type}',
+			'${cars.car_no}',
+			'${cars.electric_car}'
+			)
+		</foreach>
 	</insert>
 </mapper>

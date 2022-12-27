@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Mapper
 public interface ResidentsMapper {
-    Optional<Integer> insertResidents(ResidentsVo vo);
-    Optional<Integer> insertHouseholdComposition(List<Composition> compositions);
-    Optional<Integer> insertCars(List<Cars> cars);
+    Integer insertResidents(ResidentsVo vo);
+    Integer insertHouseholdComposition(List<Composition> compositions);
+    Integer insertCars(List<Cars> cars);
 }
