@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "f3896f4f-f738-4565-8eb8-9c58b2f0a401",
+		"name": "jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJhdXRoZW50aWNhdGVkX3RhYmxlIjpbImJpbGxkYXRhIl0sImV4cCI6MTY3NDI3NjEyM30.RvE2m6-pDdTzrudoeT0CLYDP_zSSwKxa-qjCkZZCBMoNmUTbydFsgLfM8JNW4nhAk-xwhJ9U9e2fjgOxXAfcpg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJhdXRoZW50aWNhdGVkX3RhYmxlIjpbImJpbGxkYXRhIl0sImV4cCI6MTY3MjgwODA4MH0.3971MCuwTcxTALHBxnafj1BCEoT_h02CFRkbpMu5wjQa3axmLqDefQiZGJth3dNcPa8H-zNoawkmKUhUgjEqGw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJhdXRoZW50aWNhdGVkX3RhYmxlIjpbImJpbGxkYXRhIl0sImV4cCI6MTY3MjgwODA4MH0.3971MCuwTcxTALHBxnafj1BCEoT_h02CFRkbpMu5wjQa3axmLqDefQiZGJth3dNcPa8H-zNoawkmKUhUgjEqGw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/admin"
+			},
+			"response": []
+		},
+		{
+			"name": "residents",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api\": \"insert-json\",\r\n    \"version\": \"1.1.1\",\r\n    \"description\": \"apti 입주자 정보 입력\",\r\n    \"aptcode\": \"99999\",\r\n    \"orgapt\": \"99999\",\r\n    \"house_no\": \"10021501\",\r\n\r\n    \"head_of_household\": \"Y\",\r\n    \"same_address\": \"Y\",\r\n    \"have_car\": \"Y\",\r\n    \"house_owner\": \"Y\",\r\n\r\n    \"apt_name\":\"\",\r\n    \"apt_dong\":\"\",\r\n    \"apt_ho\":\"\",\r\n    \"moving_in_date\":\"\",\r\n    \"residence_from\":\"\",\r\n    \"residence_to\":\"\",\r\n    \"owner_name\":\"\",\r\n    \"owner_address\":\"\",\r\n    \"owner_phone\":\"\",\r\n\r\n    \"household_composition\": [\r\n        {\r\n            \"index\": 1,\r\n            \"household_type\": \"1\",\r\n            \"household_owner\": \"Y\",\r\n            \"household_name\": \"홍길동\",\r\n            \"household_birthday\": \"19750101\",\r\n            \"household_phone\": \"010-2563-9875\"\r\n        },\r\n        {\r\n            \"index\": 2,\r\n            \"household_type\": \"2\",\r\n            \"household_owner\": \"N\",\r\n            \"household_name\": \"유관순\",\r\n            \"household_birthday\": \"19761201\",\r\n            \"household_phone\": \"010-8888-9999\"\r\n        },\r\n        {\r\n            \"index\": 3,\r\n            \"household_type\": \"2\",\r\n            \"household_owner\": \"N\",\r\n            \"household_name\": \"홍연우\",\r\n            \"household_birthday\": \"20101201\",\r\n            \"household_phone\": \"010-7777-8888\"\r\n        }\r\n    ],\r\n  \"cars\":[\r\n        {\r\n            \"index\": 1,\r\n            \"owner_name\": \"홍길동\",\r\n            \"car_type\": \"올뉴모닝\",\r\n            \"car_no\": \"29주1111\",\r\n            \"electric_car\": \"N\"\r\n        },\r\n        {\r\n            \"index\": 2,\r\n            \"owner_name\": \"홍길동\",\r\n            \"car_type\": \"팰리세이드\",\r\n            \"car_no\": \"219주2222\",\r\n            \"electric_car\": \"N\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/residents"
+			},
+			"response": []
+		}
+	]
+}
