@@ -140,5 +140,3 @@ electric_car
 
 
 -e "PS_HOST=panthipnas.ddns.net" -e "PS_USER=openapi" -e "PS_PASSWORD=dlwltmdpsxj1!"
-
-
