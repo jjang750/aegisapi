@@ -27,6 +27,8 @@ CREATE TABLE residents
 
 );
 
+select * from residents ;
+
 
 drop table  composition;
 CREATE TABLE composition
@@ -137,6 +139,28 @@ electric_car
 '${electric_car}'
 
 
+docker build -t aegisapi:0.0.1 .
+docker run -d -e "PS_HOST=panthipnas.ddns.net" -e "PS_USER=openapi" -e "PS_PASSWORD=dlwltmdpsxj1!" -p 80:80 aegisapi:0.0.1
 
 
--e "PS_HOST=panthipnas.ddns.net" -e "PS_USER=openapi" -e "PS_PASSWORD=dlwltmdpsxj1!"
+
+"aptcode",
+"orgapt",
+"house_no",
+"head_of_household",
+"same_address",
+"have_car",
+"house_owner",
+"apt_name",
+"apt_dong",
+"apt_ho",
+"moving_in_date",
+"residence_from",
+"residence_to",
+"owner_name",
+"owner_address",
+"owner_phone",
+"api",
+"version",
+"description"
+

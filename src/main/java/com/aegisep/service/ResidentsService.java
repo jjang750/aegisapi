@@ -11,6 +11,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
+import java.util.Collection;
+
 @Slf4j
 @Service
 @AllArgsConstructor
@@ -21,7 +23,7 @@ public class ResidentsService {
     private final PlatformTransactionManager transactionManager;
 
 
-    public ResidentsVo selectResidents(String aptcode, String house_no) {
+    public Collection<ResidentsVo> selectResidents(String aptcode, String house_no) {
         return mapper.selectResidents(aptcode, house_no);
     }
 

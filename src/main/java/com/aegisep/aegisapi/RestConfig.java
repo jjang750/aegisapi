@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 @RestController
@@ -48,7 +49,7 @@ public class RestConfig {
         log.info("get residents");
         ResidentsVo residents = objectMapper.convertValue(map, ResidentsVo.class);
         log.info("ResidentsVo : {}", residents);
-        ResidentsVo selectResidents = residentsService.selectResidents(residents.getAptcode(), residents.getHouse_no());
+        Collection<ResidentsVo> selectResidents = residentsService.selectResidents(residents.getAptcode(), residents.getHouse_no());
         return ResponseEntity.ok(objectMapper.writeValueAsString(selectResidents));
     }
 
