@@ -1,5 +1,6 @@
 package com.aegisep.aegisapi;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -11,6 +12,12 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class AegisApiConfig {
+
+    @Bean
+    public ObjectMapper getObjectMapper() {
+        return new ObjectMapper();
+    }
+
 
     @Bean
     public Docket api() {

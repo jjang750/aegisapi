@@ -4,11 +4,33 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.aegisep.mapper.ResidentsMapper">
-<!-- 	<select id="getAuthenticationByToken" resultType="com.aegisep.dto.ResidentsVo">-->
-<!--		<![CDATA[-->
-<!--			select seq, token , username, password, authorities from "UserVo" where token = '${token}'-->
-<!--	 	]]>-->
-<!--    </select>-->
+ 	<select id="selectResidents" resultType="com.aegisep.dto.ResidentsVo">
+		<![CDATA[
+			select
+				aptcode,
+				orgapt,
+				house_no,
+				head_of_household,
+				same_address,
+				have_car,
+				house_owner,
+				apt_name,
+				apt_dong,
+				apt_ho,
+				moving_in_date,
+				residence_from,
+				residence_to,
+				owner_name,
+				owner_address,
+				owner_phone,
+				api,
+				version,
+				description
+			from residents
+			where aptcode = #{aptcode}
+			and house_no = #{house_no}
+	 	]]>
+    </select>
     
     <insert id="insertResidents" parameterType="com.aegisep.dto.ResidentsVo">
 		<![CDATA[
@@ -55,7 +77,6 @@
 			)
 	 	]]>
 	</insert>
-<!--	 parameters="int; string" -->
 	<insert id="insertHouseholdComposition">
 			insert into composition (
 				index,
