@@ -9,7 +9,10 @@ import java.io.Serializable;
 @Getter
 public class Composition implements Serializable {
     private Integer index ;
-    private String household_type,
+    private String aptcode,
+            orgapt,
+            house_no,
+            household_type,
             household_owner,
             household_name,
             household_birthday,
