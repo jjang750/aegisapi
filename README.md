@@ -71,7 +71,13 @@ private 라우팅 테이블에는 private 서브넷 연결을 연결한다.
 
 # 보안그룹
 
+Load Balance 보안그룹 생성 시 HTTP 80 포트 선택 
+만약 443 포트가 필요하면 추가 선택한다.
+
 ![img_16.png](images/img_16.png)
+
+
+ECS 보안그룹 생성 시 소스선택으로 (Load Balance 보안그룹) 선택
 
 ![img_17.png](images/img_17.png)
 
