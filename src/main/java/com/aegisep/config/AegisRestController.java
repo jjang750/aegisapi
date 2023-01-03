@@ -1,4 +1,4 @@
-package com.aegisep.aegisapi;
+package com.aegisep.config;
 
 import com.aegisep.dto.ResidentsVo;
 import com.aegisep.service.ResidentsService;
@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -22,7 +21,7 @@ import java.util.HashMap;
 
 @RestController
 @Slf4j
-public class RestConfig {
+public class AegisRestController {
 
     @Autowired
     ResidentsService residentsService;

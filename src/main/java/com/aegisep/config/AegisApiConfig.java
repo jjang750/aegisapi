@@ -1,4 +1,4 @@
-package com.aegisep.aegisapi;
+package com.aegisep.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +24,7 @@ public class AegisApiConfig {
         return new Docket(DocumentationType.OAS_30)
                 .useDefaultResponseMessages(true)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.aegisep.aegisapi"))
+                .apis(RequestHandlerSelectors.basePackage("com.aegisep.config"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
