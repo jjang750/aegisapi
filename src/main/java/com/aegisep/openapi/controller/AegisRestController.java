@@ -1,7 +1,7 @@
-package com.aegisep.config;
+package com.aegisep.openapi.controller;
 
-import com.aegisep.dto.ResidentsVo;
-import com.aegisep.service.ResidentsService;
+import com.aegisep.openapi.dto.ResidentsVo;
+import com.aegisep.openapi.service.ResidentsService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;

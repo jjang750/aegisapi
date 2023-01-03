@@ -1,8 +1,8 @@
-package com.aegisep.mapper;
+package com.aegisep.openapi.repository;
 
-import com.aegisep.dto.Cars;
-import com.aegisep.dto.Composition;
-import com.aegisep.dto.ResidentsVo;
+import com.aegisep.openapi.dto.Cars;
+import com.aegisep.openapi.dto.Composition;
+import com.aegisep.openapi.dto.ResidentsVo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

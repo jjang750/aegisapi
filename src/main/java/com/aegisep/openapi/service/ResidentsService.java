@@ -1,8 +1,8 @@
-package com.aegisep.service;
+package com.aegisep.openapi.service;
 
 
-import com.aegisep.dto.ResidentsVo;
-import com.aegisep.mapper.ResidentsMapper;
+import com.aegisep.openapi.dto.ResidentsVo;
+import com.aegisep.openapi.repository.ResidentsMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

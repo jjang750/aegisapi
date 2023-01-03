@@ -1,4 +1,4 @@
-package com.aegisep.dto;
+package com.aegisep.openapi.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -3,8 +3,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.aegisep.mapper.ResidentsMapper">
- 	<select id="selectResidents" resultType="com.aegisep.dto.ResidentsVo">
+<mapper namespace="com.aegisep.openapi.repository.ResidentsMapper">
+ 	<select id="selectResidents" resultType="com.aegisep.openapi.dto.ResidentsVo">
 		<![CDATA[
 			select
 				aptcode,
@@ -32,7 +32,7 @@
 	 	]]>
     </select>
     
-    <insert id="insertResidents" parameterType="com.aegisep.dto.ResidentsVo">
+    <insert id="insertResidents" parameterType="com.aegisep.openapi.dto.ResidentsVo">
 		<![CDATA[
 			insert into residents (
 				aptcode,
