@@ -81,6 +81,24 @@ ECS 보안그룹 생성 시 소스선택으로 (Load Balance 보안그룹) 선�
 
 ![img_17.png](images/img_17.png)
 
+# 작업정의 
+
+Spring boot 작업 정의 시 하드웨어 메모리를 500이상으로 잡아야 Out of memory 에러가 나지 않음.
+
+![img_19.png](images/img_19.png)
+
+
 # 성공
 ![img_2.png](images/img_2.png)
+
+
+
+![img19.png](images/img19.png)
+
+# 클러스터 삭제 순서
+
+클러스터 삭제 시 CloudFormation > Stack 메뉴에서 인스턴스를 삭제 후 완료 되면 클러스트를 삭제 한다. 
+
+![img_20.png](images/img_20.png)
+
 
