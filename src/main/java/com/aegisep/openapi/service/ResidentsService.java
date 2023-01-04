@@ -33,7 +33,7 @@ public class ResidentsService {
                 transactionManager.getTransaction(new DefaultTransactionDefinition());
         try {
             mapper.insertResidents(vo);
-            mapper.insertHouseholdComposition(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(), vo.getHousehold_composition());
+            mapper.insertHouseholdComposition(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(), vo.getHousehold_compositionVo());
             mapper.insertCars(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(),vo.getCars());
 
         } catch (Exception e) {

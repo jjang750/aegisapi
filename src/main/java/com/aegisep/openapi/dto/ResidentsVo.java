@@ -33,8 +33,8 @@ public class ResidentsVo implements Serializable {
                     version,
                     description;
 
-    private List<Composition> household_composition;
-    private List<Cars> cars;
+    private List<CompositionVo> household_compositionVo;
+    private List<CarsVo> cars;
 }
 
 

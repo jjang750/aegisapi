@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class Cars implements Serializable {
+public class CarsVo implements Serializable {
     private Integer index;
     private String aptcode,
             orgapt,

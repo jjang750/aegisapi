@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class Composition implements Serializable {
+public class CompositionVo implements Serializable {
     private Integer index ;
     private String aptcode,
             orgapt,
