@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -28,6 +29,12 @@ public class AegisRestController {
 
     @Autowired
     ObjectMapper objectMapper;
+
+    @GetMapping(value = "/hello", produces = "application/json; charset=UTF-8")
+    public ResponseEntity<String> hello() {
+        log.info("current time : {}", LocalDateTime.now());
+        throw new RuntimeException("cloud-watch !");
+    }
 
     @GetMapping(value = "/", produces = "application/json; charset=UTF-8")
     public ResponseEntity<String> health() {
