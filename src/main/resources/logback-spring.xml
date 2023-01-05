@@ -12,8 +12,8 @@
         <maxFlushTimeMillis>30000</maxFlushTimeMillis>
         <maxBlockTimeMillis>5000</maxBlockTimeMillis>
         <retentionTimeDays>0</retentionTimeDays>
-        <accessKeyId>AKIAUQTPDVH6D4PC3YHB</accessKeyId>
-        <secretAccessKey>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</secretAccessKey>
+        <accessKeyId>${accessKeyId}</accessKeyId>
+        <secretAccessKey>${secretAccessKey}</secretAccessKey>
     </appender>
 
     <appender debug="true" name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
