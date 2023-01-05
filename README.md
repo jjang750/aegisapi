@@ -102,3 +102,9 @@ Spring boot 작업 정의 시 하드웨어 메모리를 500이상으로 잡아�
 ![img_20.png](images/img_20.png)
 
 
+# RDS 보안그륩
+
+RDS에 접근 시 보안그룹이 필요함
+
+![img_21.png](images/img_21.png)
+
