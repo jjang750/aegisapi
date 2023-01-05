@@ -108,3 +108,9 @@ RDS에 접근 시 보안그룹이 필요함
 
 ![img_21.png](images/img_21.png)
 
+# RDS 접속 정보
+
+Database 명은 postgres
+
+![openapi.png](images/openapi.png)
+
