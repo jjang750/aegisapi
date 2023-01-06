@@ -48,6 +48,10 @@ public02, private02 서브넷은 가용영역을 ap-northeast-2b에 만든다.\
 
 nat 게이트웨이를 만들때 탄력적IP할당 버튼을 눌러 ID를 생성한다.
 
+# 탄력적 주소 할당
+
+![img_22.png](images/img_22.png)
+
 # 라우팅 테이블
 
 라우팅 테이블을 public, private 두 가지를 생성한다. \
