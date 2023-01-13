@@ -24,7 +24,7 @@ public class AegisApiConfig {
         return new Docket(DocumentationType.OAS_30)
                 .useDefaultResponseMessages(true)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.aegisep.config"))
+                .apis(RequestHandlerSelectors.basePackage("com.aegisep.openapi.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
