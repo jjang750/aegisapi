@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "61d15a59-6663-40db-a1e2-0c62dec2ac58",
+		"name": "openapi",
+		"description": "Open API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "root",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e4aee890-bbca-40aa-8c2f-cfd2616d1282"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"commands\": [\r\n    {\r\n      \"component\": \"main\",\r\n      \"capability\": \"voiceaddress44089.currenttemperature\",\r\n      \"command\": \"getCurrentTemperature\",\r\n      \"arguments\": []\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": "http://localhost:8080/openapi/billdata/1"
+			},
+			"response": []
+		},
+		{
+			"name": "hello",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e4aee890-bbca-40aa-8c2f-cfd2616d1282"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"commands\": [{\"component\": \"RoomTemperatureSetting\", \"capability\": \"voiceaddress44089.thermostatMode\", \"command\": \"setMode\", \"arguments\": [\"away\"]}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/openapi/billdata/1"
+			},
+			"response": []
+		}
+	]
+}

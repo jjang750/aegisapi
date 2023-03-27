@@ -1,4 +1,4 @@
-package com.aegisep;
+package com.aegisep.openapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,14 +6,15 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class AegisapiApplication  extends SpringBootServletInitializer {
+public class OpenapiApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AegisapiApplication.class, args);
+		SpringApplication.run(OpenapiApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(AegisapiApplication.class);
+		return application.sources(OpenapiApplication.class);
 	}
+
 }

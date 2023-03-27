@@ -5,7 +5,7 @@
         <layout>
             <pattern>[${hostname}] [%date] [%level] [%file:%line] - %msg%n</pattern>
         </layout>
-        <logGroupName>aegisapi</logGroupName>
+        <logGroupName>openapi</logGroupName>
         <logStreamUuidPrefix>openapi-</logStreamUuidPrefix>
         <logRegion>ap-northeast-2</logRegion>
         <maxBatchLogEvents>50</maxBatchLogEvents>

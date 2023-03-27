@@ -1,47 +1,25 @@
 package com.aegisep.openapi.service;
 
-
-import com.aegisep.openapi.dto.ResidentsVo;
-import com.aegisep.openapi.repository.ResidentsMapper;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
-
-import java.util.Collection;
-
-@Slf4j
-@Service
-@AllArgsConstructor
-public class ResidentsService {
-    @Autowired
-    private ResidentsMapper mapper;
-
-    private final PlatformTransactionManager transactionManager;
-
-
-    public Collection<ResidentsVo> selectResidents(String aptcode, String house_no) {
-        return mapper.selectResidents(aptcode, house_no);
-    }
-
-    public Integer insert(ResidentsVo vo){
-
-        TransactionStatus txStatus =
-                transactionManager.getTransaction(new DefaultTransactionDefinition());
-        try {
-            mapper.insertResidents(vo);
-            mapper.insertHouseholdComposition(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(), vo.getHousehold_compositionVo());
-            mapper.insertCars(vo.getAptcode(), vo.getOrgapt(), vo.getHouse_no(),vo.getCars());
-
-        } catch (Exception e) {
-            transactionManager.rollback(txStatus);
-            throw e;
-        }
-        transactionManager.commit(txStatus);
-
-        return 1;
-    }
+public interface ResidentsService {
+    /**
+     * Aegis api naming rule
+     *
+     * Class 명 및 Field 명은 Java 공통 표기법인 카멜 표기법을 기본으로
+     * 단, VO 클래스는 Database 와 동일하게 표기한다.
+     *
+     * Package : 소문자 기본
+     *   com.aegisep.<명사>.service
+     *       com.aegisep.openapi.service
+     *
+     * Service
+     *   class 명 : <대표 테이블>Service
+     *     com.aegisep.openapi.service.ResidentsService
+     *
+     *   Method 명 : 접두사<대표 테이블>
+     *     public Object selectResidents : select 단일 쿼리 메인 테이블명 기준
+     *     public Object selectAllResidents : select 목록 쿼리 메인 테이블명 기준
+     *     public Object deleteResidents : delete 쿼리 테이블명 기준
+     *     public Object updateResidents : update 쿼리 테이블명 기준
+     */
+    String getSysdate();
 }
